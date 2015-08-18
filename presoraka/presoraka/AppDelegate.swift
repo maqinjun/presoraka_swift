@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +18,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        
+        let tabBar: UITabBarController = UITabBarController()
+        
+        let indexVC: IndexViewController = IndexViewController()
+        let indexNav: UINavigationController = UINavigationController(rootViewController: indexVC)
+        
+        let treasureVC: TreasureViewController = TreasureViewController()
+        let treasureNav: UINavigationController = UINavigationController(rootViewController: treasureVC)
+        
+        let lifesVC: LifesViewController = LifesViewController()
+        let lifesNav: UINavigationController = UINavigationController(rootViewController: lifesVC)
+        
+        let moreVC: MoreViewController = MoreViewController()
+        let moreNav: UINavigationController = UINavigationController(rootViewController: moreVC)
+        
+        indexNav.tabBarItem.title = "首页"
+        treasureNav.tabBarItem.title = "财富"
+        lifesNav.tabBarItem.title = "生活"
+        moreNav.tabBarItem.title = "更多"
+        
+        tabBar.viewControllers = [indexNav, treasureNav, lifesNav, moreNav]
+        
+        self.window?.rootViewController = tabBar
+        self.window?.makeKeyAndVisible()
         return true
     }
 

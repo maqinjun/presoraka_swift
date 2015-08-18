@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		C8FDBF5B1B82D9EB00E9F57B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF5A1B82D9EB00E9F57B /* AppDelegate.swift */; };
 		C8FDBF5E1B82D9EC00E9F57B /* presoraka.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF5C1B82D9EC00E9F57B /* presoraka.xcdatamodeld */; };
-		C8FDBF601B82D9EC00E9F57B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF5F1B82D9EC00E9F57B /* ViewController.swift */; };
-		C8FDBF631B82D9EC00E9F57B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF611B82D9EC00E9F57B /* Main.storyboard */; };
 		C8FDBF651B82D9EC00E9F57B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF641B82D9EC00E9F57B /* Images.xcassets */; };
 		C8FDBF681B82D9EC00E9F57B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF661B82D9EC00E9F57B /* LaunchScreen.xib */; };
 		C8FDBF741B82D9EC00E9F57B /* presorakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF731B82D9EC00E9F57B /* presorakaTests.swift */; };
+		C8FDBF821B82DADB00E9F57B /* Index.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF811B82DADB00E9F57B /* Index.storyboard */; };
+		C8FDBF841B82DAE900E9F57B /* Treasure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF831B82DAE900E9F57B /* Treasure.storyboard */; };
+		C8FDBF861B82DAF400E9F57B /* Lifes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF851B82DAF400E9F57B /* Lifes.storyboard */; };
+		C8FDBF881B82DAFE00E9F57B /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF871B82DAFE00E9F57B /* More.storyboard */; };
+		C8FDBF8A1B82DB1900E9F57B /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF891B82DB1900E9F57B /* IndexViewController.swift */; };
+		C8FDBF8C1B82DB2900E9F57B /* TreasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF8B1B82DB2900E9F57B /* TreasureViewController.swift */; };
+		C8FDBF8E1B82DB3400E9F57B /* LifesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF8D1B82DB3400E9F57B /* LifesViewController.swift */; };
+		C8FDBF901B82DB3D00E9F57B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF8F1B82DB3D00E9F57B /* MoreViewController.swift */; };
+		C8FDBF931B82DE8400E9F57B /* top_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C8FDBF921B82DE8400E9F57B /* top_logo.png */; };
+		C8FDBF961B82DEC300E9F57B /* UIViewController+BaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF951B82DEC300E9F57B /* UIViewController+BaseNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +39,21 @@
 		C8FDBF591B82D9EB00E9F57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8FDBF5A1B82D9EB00E9F57B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8FDBF5D1B82D9EC00E9F57B /* presoraka.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = presoraka.xcdatamodel; sourceTree = "<group>"; };
-		C8FDBF5F1B82D9EC00E9F57B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C8FDBF621B82D9EC00E9F57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8FDBF641B82D9EC00E9F57B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8FDBF671B82D9EC00E9F57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C8FDBF6D1B82D9EC00E9F57B /* presorakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = presorakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FDBF721B82D9EC00E9F57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8FDBF731B82D9EC00E9F57B /* presorakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presorakaTests.swift; sourceTree = "<group>"; };
+		C8FDBF811B82DADB00E9F57B /* Index.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Index.storyboard; sourceTree = "<group>"; };
+		C8FDBF831B82DAE900E9F57B /* Treasure.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Treasure.storyboard; sourceTree = "<group>"; };
+		C8FDBF851B82DAF400E9F57B /* Lifes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lifes.storyboard; sourceTree = "<group>"; };
+		C8FDBF871B82DAFE00E9F57B /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		C8FDBF891B82DB1900E9F57B /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		C8FDBF8B1B82DB2900E9F57B /* TreasureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreasureViewController.swift; sourceTree = "<group>"; };
+		C8FDBF8D1B82DB3400E9F57B /* LifesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifesViewController.swift; sourceTree = "<group>"; };
+		C8FDBF8F1B82DB3D00E9F57B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		C8FDBF921B82DE8400E9F57B /* top_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_logo.png; sourceTree = "<group>"; };
+		C8FDBF951B82DEC300E9F57B /* UIViewController+BaseNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BaseNavigationView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +95,13 @@
 		C8FDBF571B82D9EB00E9F57B /* presoraka */ = {
 			isa = PBXGroup;
 			children = (
+				C8FDBF941B82DE9300E9F57B /* Category Group */,
+				C8FDBF911B82DE6900E9F57B /* Images */,
+				C8FDBF801B82DAAB00E9F57B /* More Group */,
+				C8FDBF7F1B82DAA000E9F57B /* Lifes Group */,
+				C8FDBF7E1B82DA9900E9F57B /* Treasure Group */,
+				C8FDBF7D1B82DA9000E9F57B /* Index Group */,
 				C8FDBF5A1B82D9EB00E9F57B /* AppDelegate.swift */,
-				C8FDBF5F1B82D9EC00E9F57B /* ViewController.swift */,
-				C8FDBF611B82D9EC00E9F57B /* Main.storyboard */,
 				C8FDBF641B82D9EC00E9F57B /* Images.xcassets */,
 				C8FDBF661B82D9EC00E9F57B /* LaunchScreen.xib */,
 				C8FDBF5C1B82D9EC00E9F57B /* presoraka.xcdatamodeld */,
@@ -113,6 +133,58 @@
 				C8FDBF721B82D9EC00E9F57B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8FDBF7D1B82DA9000E9F57B /* Index Group */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF811B82DADB00E9F57B /* Index.storyboard */,
+				C8FDBF891B82DB1900E9F57B /* IndexViewController.swift */,
+			);
+			name = "Index Group";
+			sourceTree = "<group>";
+		};
+		C8FDBF7E1B82DA9900E9F57B /* Treasure Group */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF831B82DAE900E9F57B /* Treasure.storyboard */,
+				C8FDBF8B1B82DB2900E9F57B /* TreasureViewController.swift */,
+			);
+			name = "Treasure Group";
+			sourceTree = "<group>";
+		};
+		C8FDBF7F1B82DAA000E9F57B /* Lifes Group */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF851B82DAF400E9F57B /* Lifes.storyboard */,
+				C8FDBF8D1B82DB3400E9F57B /* LifesViewController.swift */,
+			);
+			name = "Lifes Group";
+			sourceTree = "<group>";
+		};
+		C8FDBF801B82DAAB00E9F57B /* More Group */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF871B82DAFE00E9F57B /* More.storyboard */,
+				C8FDBF8F1B82DB3D00E9F57B /* MoreViewController.swift */,
+			);
+			name = "More Group";
+			sourceTree = "<group>";
+		};
+		C8FDBF911B82DE6900E9F57B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF921B82DE8400E9F57B /* top_logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C8FDBF941B82DE9300E9F57B /* Category Group */ = {
+			isa = PBXGroup;
+			children = (
+				C8FDBF951B82DEC300E9F57B /* UIViewController+BaseNavigationView.swift */,
+			);
+			name = "Category Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +267,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FDBF631B82D9EC00E9F57B /* Main.storyboard in Resources */,
+				C8FDBF931B82DE8400E9F57B /* top_logo.png in Resources */,
+				C8FDBF861B82DAF400E9F57B /* Lifes.storyboard in Resources */,
+				C8FDBF881B82DAFE00E9F57B /* More.storyboard in Resources */,
+				C8FDBF821B82DADB00E9F57B /* Index.storyboard in Resources */,
+				C8FDBF841B82DAE900E9F57B /* Treasure.storyboard in Resources */,
 				C8FDBF681B82D9EC00E9F57B /* LaunchScreen.xib in Resources */,
 				C8FDBF651B82D9EC00E9F57B /* Images.xcassets in Resources */,
 			);
@@ -215,9 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FDBF601B82D9EC00E9F57B /* ViewController.swift in Sources */,
 				C8FDBF5E1B82D9EC00E9F57B /* presoraka.xcdatamodeld in Sources */,
+				C8FDBF8C1B82DB2900E9F57B /* TreasureViewController.swift in Sources */,
+				C8FDBF961B82DEC300E9F57B /* UIViewController+BaseNavigationView.swift in Sources */,
 				C8FDBF5B1B82D9EB00E9F57B /* AppDelegate.swift in Sources */,
+				C8FDBF901B82DB3D00E9F57B /* MoreViewController.swift in Sources */,
+				C8FDBF8A1B82DB1900E9F57B /* IndexViewController.swift in Sources */,
+				C8FDBF8E1B82DB3400E9F57B /* LifesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +320,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C8FDBF611B82D9EC00E9F57B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C8FDBF621B82D9EC00E9F57B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C8FDBF661B82D9EC00E9F57B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = presoraka/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = presoraka/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
