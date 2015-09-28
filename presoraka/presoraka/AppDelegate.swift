@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        testSwift()
+        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
         
@@ -46,6 +48,146 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = tabBar
         self.window?.makeKeyAndVisible()
         return true
+    }
+    
+    func testSwift(){
+        _ = UITableView();
+        
+        if #available(iOS 8.0, *){
+            print("iOS versiont >= 8.0")
+        }else{
+            print("iOS version < 8.0")
+        }
+        //        let testArr = Array().init();
+        
+        do{
+            _ = try NSString(contentsOfFile: "/file/path/str.txt", encoding: NSUTF8StringEncoding)
+            let fileMgr = NSFileManager.defaultManager()
+
+            try fileMgr.createDirectoryAtPath("/test", withIntermediateDirectories: true, attributes: nil)
+            
+            var isDic: ObjCBool = false
+            
+            fileMgr.fileExistsAtPath("/tmp/test", isDirectory: &isDic)
+            
+        }catch {
+            print("read content failed.")
+        }
+        
+        
+        print(branch())
+        
+        // Arrays @{
+        var emptyArr = [String](count: 4, repeatedValue: "0")
+        
+        emptyArr.append("test1")
+        emptyArr.append("test2")
+     
+        emptyArr[0] = "2"
+
+        emptyArr.insert("3", atIndex: 1)
+        
+        print(emptyArr)
+
+        let arrs = ["1", "2", "3"]
+        
+        print(arrs)
+        
+        let str1 = "test"
+        
+        if str1 == "test"{
+            print("str1 = \"test\"")
+        }
+        
+        var arrsAdd = emptyArr + arrs
+        
+        print(arrsAdd)
+        
+        let element2 = arrsAdd[2]
+        
+//        element2 = "value"
+        arrsAdd[2] = "value"
+        
+        print(arrsAdd)
+        
+        print(element2)
+        
+        arrsAdd[3...5] = ["value1", "value2", "value3"]
+        
+        print(arrsAdd)
+        /// An unsigned integer that can be used as a hash table address.
+        print(arrsAdd[0].hash)
+        /// The hash value.
+        ///
+        /// **Axiom:** `x == y` implies `x.hashValue == y.hashValue`.
+        ///
+        /// - Note: The hash value is not guaranteed to be stable across
+        ///   different invocations of the same program.  Do not persist the
+        ///   hash value across program runs.
+        print(arrsAdd[0].hashValue)
+        print("Int64 max = \(Int.max), min = \(Int.min)")
+        print("Int8 max = \(Int8.max), min = \(Int8.min)")
+        print("Int16 max = \(Int16.max), min = \(Int16.min)")
+        print("Int32 max = \(Int32.max), min = \(Int32.min)")
+        print("Int64 max = \(Int64.max), min = \(Int64.min)")
+        //}@
+        
+        // Set @{
+        var sets: Set<String> = ["set2", "set1", "set3", "set3", "set4"]
+        print(sets)
+        print(sets.sort())
+        
+        sets.insert("set5")
+        
+        print(sets)
+        
+        sets = []
+        
+        print(sets)
+        //}@
+        
+        // Dictionary @{
+        var dics = [Int:String]()
+//        dics
+        dics[1] = "I'm 1"
+        dics[0] = "I'm 0"
+        dics[3] = "I'm 3"
+        dics[2] = "I'm 2"
+        
+        print(dics)
+        
+        var float: Float = 0.0000000000000001
+        
+        print("\(float) Is zero \(float.isZero), sizeof = \(sizeof(Int.Type))")
+        
+        //}@
+        
+    }
+    
+    func branch() -> String {
+        
+        var str = ""
+        str += "1"
+        defer { str += "2"
+            print("branch 1 ", str)
+        }
+        let counter = 3;
+        
+        if counter > 0 {
+            
+            str += "3"
+            defer { str += "4" }
+            str += "5"
+            
+            return str
+            
+        }
+        
+        str += "6"
+        
+        
+        return str
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -77,7 +219,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.msxt.presoraka" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -93,7 +235,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("presoraka.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -105,6 +250,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -126,11 +273,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

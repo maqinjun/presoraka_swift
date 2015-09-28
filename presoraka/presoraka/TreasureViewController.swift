@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TreasureViewController: UIViewController, BaseNavigationViewDelegate {
+class TreasureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

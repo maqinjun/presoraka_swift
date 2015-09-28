@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IndexViewController: UITableViewController, BaseNavigationViewDelegate {
+class IndexViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +16,22 @@ class IndexViewController: UITableViewController, BaseNavigationViewDelegate {
         // Do any additional setup after loading the view.
         
         self.initNavigationView()
+        
+        let numbers = [1, 2, 3, 4, 5]
+        
+        let test = numbers.map(){
+            $0
+        }
+        
+        dispatch_async(dispatch_get_main_queue()){
+        
+        }
+        
+        dispatch_async(dispatch_get_global_queue(0, 0)){
+        
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

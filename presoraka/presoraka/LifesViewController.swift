@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LifesViewController: UIViewController, BaseNavigationViewDelegate {
+class LifesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

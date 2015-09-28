@@ -9,12 +9,12 @@
 import UIKit
 
 protocol BaseNavigationViewDelegate{
-    func initNavigationView()->Void
+     func initNavigationView()->Void
 }
 
 extension UIViewController: BaseNavigationViewDelegate{
     
-    func initNavigationView() {
+      public func initNavigationView() {
         self.navigationController?.navigationBar.barTintColor = UIColor.redColor();
         
         var barFrame = self.navigationController?.navigationBar.frame
